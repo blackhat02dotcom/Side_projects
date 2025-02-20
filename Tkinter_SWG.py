@@ -1,5 +1,7 @@
 # This is a "Snake Water Gun" in which it {PLAYER VS MACHINE}
 # The Game uses Tkinter as the deployed system and acting as a LIVE SERVER
+
+# github projects
 import pygame
 import random
 
@@ -65,6 +67,7 @@ while running:
         pygame.draw.rect(screen, color, (x, y, 100, 50))
         button_text = font.render(text, True, WHITE)
         screen.blit(button_text, (x + 10, y + 15))
+// 
 
     # Event Handling
     for event in pygame.event.get():
