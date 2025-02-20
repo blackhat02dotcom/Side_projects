@@ -72,6 +72,8 @@ while running:
         pygame.draw.rect(screen, color, (x, y, 100, 50))
         button_text = font.render(text, True, WHITE)
         screen.blit(button_text, (x + 10, y + 15))
+
+# codinnggg
 // 
 
     # Event Handling
