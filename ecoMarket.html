@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Shopping Assistant</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            flex: 1; /* Ensures main takes the remaining space */
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.75rem 1.5rem;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Styling for Products Section */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card h3 {
+            color: #4CAF50;
+        }
+
+        /* Responsive Enhancements */
+        @media (max-width: 600px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <h1>Eco-Friendly Shopping Assistant</h1>
+        <p>Your guide to sustainable shopping!</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome</h2>
+            <p>Discover eco-friendly products and make sustainable choices to save the planet.</p>
+            <a href="#products" class="button">View Products</a>
+        </section>
+
+        <section id="products" class="products">
+            <div class="product-card">
+                <h3>Reusable Water Bottle</h3>
+                <p>A sustainable alternative to plastic bottles.</p>
+                <a href="https://www.flipkart.com/search?q=reusable%20water%20bottle" target="_blank" class="button">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <h3>Bamboo Toothbrush</h3>
+                <p>Eco-friendly dental care.</p>
+                <a href="https://www.flipkart.com/search?q=bamboo%20toothbrush" target="_blank" class="button">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <h3>Reusable Shopping Bag</h3>
+                <p>Reduce waste with stylish reusable bags.</p>
+                <a href="https://www.flipkart.com/search?q=reusable%20shopping%20bag" target="_blank" class="button">Buy Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Eco-Friendly Shopping Assistant. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Feature: Dynamic Product Count
+        document.addEventListener('DOMContentLoaded', () => {
+            const productCount = document.querySelectorAll('.product-card').length;
+            const header = document.querySelector('header');
+            const productInfo = document.createElement('p');
+            productInfo.textContent = `We offer ${productCount} eco-friendly products!`;
+            header.appendChild(productInfo);
+        });
+
+        // Feature: Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
