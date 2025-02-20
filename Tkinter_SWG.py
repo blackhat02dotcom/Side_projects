@@ -20,6 +20,7 @@ GREEN = (0, 200, 0)
 RED = (200, 0, 0)
 BLUE = (0, 0, 200)
 GRAY = (150, 150, 150)
+# done it with the help of python
 
 # Fonts
 font = pygame.font.Font(None, 36)
