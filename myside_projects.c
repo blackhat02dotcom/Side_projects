@@ -12,7 +12,7 @@ struct Book {
     char author[50];
     int is_available;  // 1 if available, 0 if borrowed
 };
-
+// done it with the help of AI
 // Function prototypes
 void addBook(FILE *file);
 void displayBooks(FILE *file);
