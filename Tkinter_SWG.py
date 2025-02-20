@@ -39,6 +39,8 @@ user_choice = None
 computer_choice = None
 result = None
 
+#  doing it with the help of laptop
+
 
 def determine_winner(player, computer):
     """Determine the winner based on the choices."""
