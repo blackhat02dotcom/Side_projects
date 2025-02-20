@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+// my side projects
+
 // Structure to store book information
 struct Book {
     int id;
