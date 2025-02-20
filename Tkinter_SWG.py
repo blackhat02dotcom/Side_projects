@@ -3,6 +3,8 @@
 
 # github projects
 import pygame
+
+# importing it with the help of python
 import random
 
 # python is my favourite language
