@@ -20,6 +20,8 @@ void searchBook(FILE *file);
 void borrowBook(FILE *file);
 void returnBook(FILE *file);
 
+// creating my C projects
+
 int main() {
     FILE *file;
     int choice;
