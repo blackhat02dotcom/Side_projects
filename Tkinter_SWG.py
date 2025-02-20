@@ -5,6 +5,8 @@
 import pygame
 import random
 
+# python is my favourite language
+
 # Initialize pygame
 pygame.init()
 
